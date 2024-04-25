@@ -1,3 +1,18 @@
+#FROM me
+this is fork version from https://github.com/pawelmoll/wsq
+in this update version, I add 'pnglib' directly because problem on my macm1 cannot find libpng. when run make. 
+and update MakeFile.
+with this version of me is cannot not use png2wsq.
+
+#Step to use
+installation step by make
+`make clean`
+`make`
+
+then run the bat. with .wsq to .png by this.
+`./wsq2png R4-1_cropped.wsq test4.png`
+
+#FROM wsq repo
 This is a simple tool allowing conversion between Wavelet Scalar
 Quantization (WSQ) image format and standard PNG.
 
