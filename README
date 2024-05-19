@@ -11,6 +11,7 @@ installation step by make
 
 then run the bat. with .wsq to .png by this.
 `./wsq2png R4-1_cropped.wsq test4.png`
+`./png2wsq test4.png R4-1_cropped.wsq`
 
 #FROM wsq repo
 This is a simple tool allowing conversion between Wavelet Scalar

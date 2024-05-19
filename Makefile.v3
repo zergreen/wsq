@@ -10,19 +10,13 @@ CPPFLAGS := -Iinclude -Ilibpng/include
 CFLAGS := -Wall -g -D__NBISLE__
 LDFLAGS := -Llibpng/lib -lpng -lm
 
-all: wsq2png png2wsq
+all: wsq2png
 
 clean:
 	rm -f $(OBJS)
 	rm -f wsq2png wsq2png.o
-	rm -f png2wsq png2wsq.o
 
 wsq2png: wsq2png.o $(OBJS)
-	$(CC) $^ -o $@ $(LDFLAGS)
+	$(CC) $^ -o $@ -lpng $(LDFLAGS)
 
 wsq2png.o: wsq2png.c
-
-png2wsq: png2wsq.o $(OBJS)
-	$(CC) $^ -o $@ $(LDFLAGS)
-
-png2wsq.o: png2wsq.c
